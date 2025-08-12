@@ -1,0 +1,27 @@
+# Node.js dependencies
+node_modules/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Папки с билдом
+build/
+
+# Файлы окружения
+.env
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
