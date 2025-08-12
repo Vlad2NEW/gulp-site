@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Демонстрация возможностей HTML и CSS</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #ACB6E5);
+        color: #333;
+    }
+
+    header {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        transition: color 0.3s ease;
+    }
+
+    h1:hover {
+        color: #ff5722;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 300px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    .card video, .card iframe, .card audio {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        margin-top: 20px;
+    }
+
+    /* Анимация кнопки */
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: #ff5722;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background 0.3s ease;
+        animation: pulse 2s infinite;
+    }
+
+    .btn:hover {
+        background: #e64a19;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Моя учебная страница</h1>
+    <p>HTML5 + CSS3: гибкая верстка, анимации, мультимедиа</p>
+</header>
+
+<main>
+    <div class="card">
+        <video controls poster="https://www.w3schools.com/html/mov_bbb.jpg">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <div style="padding: 15px;">
+            <h3>Пример видео</h3>
+            <p>HTML5 тег &lt;video&gt; с постером и управлением.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=30.50%2C50.43%2C30.53%2C50.45&amp;layer=mapnik"
+                style="border:0; height:200px;"></iframe>
+        <div style="padding: 15px;">
+            <h3>Встроенная карта</h3>
+            <p>OpenStreetMap через iframe.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Ваш браузер не поддерживает аудио.
+        </audio>
+        <div style="padding: 15px;">
+            <h3>Пример аудио</h3>
+            <p>HTML5 тег &lt;audio&gt; с несколькими форматами.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Сделано в рамках курса. <a href="#" class="btn">Подробнее</a></p>
+</footer>
+
+</body>
+</html>
